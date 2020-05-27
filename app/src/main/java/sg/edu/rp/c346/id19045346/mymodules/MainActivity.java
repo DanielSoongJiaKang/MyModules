@@ -28,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this,ModuleDetailActivity.class);
                 intent.putExtra("module",346);
+
+                intent.putExtra("Module Code","C346");
+                intent.putExtra("Module Name","Android Programming");
+                intent.putExtra("Academic Year", 2020);
+                intent.putExtra("Semester" ,1);
+                intent.putExtra("Module Credit",4);
+                intent.putExtra("Venue","W66M");
                 startActivity(intent);
 
             }
@@ -39,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this,ModuleDetailActivity.class);
                 intent.putExtra("module",349);
+                intent.putExtra("Module Code","C349");
+                intent.putExtra("Module Name","iPad Programming");
+                intent.putExtra("Academic Year", 2020);
+                intent.putExtra("Semester" ,1);
+                intent.putExtra("Module Credit",4);
+                intent.putExtra("Venue","W66M");
+
                 startActivity(intent);
             }
         });

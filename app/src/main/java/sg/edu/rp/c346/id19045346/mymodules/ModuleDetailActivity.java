@@ -32,23 +32,27 @@ public class ModuleDetailActivity extends AppCompatActivity {
         backk = findViewById(R.id.goback);
         Intent ReceivedIntent = getIntent();
         int modnum = ReceivedIntent.getIntExtra("module",0);
-
-
-        if(modnum == 346) {
-            code.setText("Module Code: C346");
-            name.setText("Module Name: Android Programming");
-            year.setText("Academic Year: 2020");
-            sem.setText("Semester: 1");
-            credit.setText("Module Credit: 4");
-            venue.setText("Venue: W66M");
+        String modcode = ReceivedIntent.getStringExtra("Module Code");
+        String modname = ReceivedIntent.getStringExtra("Module Name");
+        int modyear = ReceivedIntent.getIntExtra("Academic Year",0);
+        int modsem = ReceivedIntent.getIntExtra("Semester",0);
+        int modcredit = ReceivedIntent.getIntExtra("Module Credit",0);
+        String modvenue = ReceivedIntent.getStringExtra("Venue");
+        if(modnum == 346) { //optional but to be safe
+            code.setText("Module Code: " + modcode);
+            name.setText("Module Name: " + modname);
+            year.setText("Academic Year: " + modyear);
+            sem.setText("Semester: " + modsem);
+            credit.setText("Module Credit: " + modcredit);
+            venue.setText("Venue: " + modvenue);
         }
-        else if(modnum == 349) {
-            code.setText("Module Code: C349");
-            name.setText("Module Name: iPad Programming");
-            year.setText("Academic Year: 2020");
-            sem.setText("Semester: 1");
-            credit.setText("Module Credit: 4");
-            venue.setText("Venue: W66M");
+        else if(modnum == 349) { //optional but to be safe
+            code.setText("Module Code: " + modcode);
+            name.setText("Module Name: " + modname);
+            year.setText("Academic Year: " + modyear);
+            sem.setText("Semester: " + modsem);
+            credit.setText("Module Credit: " + modcredit);
+            venue.setText("Venue: " + modvenue);
         }
 
 
@@ -56,8 +60,7 @@ public class ModuleDetailActivity extends AppCompatActivity {
         backk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ModuleDetailActivity.this,MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
 
